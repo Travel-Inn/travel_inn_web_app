@@ -1,0 +1,85 @@
+.menuContent{
+    background-image: url('../images/Lunch-Buffet-website-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    overflow:hidden;
+  }
+  .menuPageInfo {
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0, 0.7);
+    width: 40%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-top: 15%;
+    margin-bottom: 25%;
+  }
+  .menuList{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+  }
+  .menuTabs{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+  }
+  .menuTab{
+    text-align: center;
+    margin-right: 40px;
+  }
+  .menuTab h4{
+    margin-top: 0;
+  }
+  .menuTabImage{
+    border-radius: 100%;
+  }
+  .menuContainer{
+    width: 75%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-image: url("../images/breakfast-foods.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+  }
+  .menuName , .menuItems{
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0, 0.7);
+    width: 40%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+  }
+  .menuItems{
+    margin-top: 10%;
+    padding: 20px;
+    width: 50%;
+  }
+  .menuItems h2{
+      text-decoration: underline;
+  }
+  .menuItems table{
+      width: 90%;
+      text-align: left;
+      border-collapse: collapse;
+      margin-top: 10px;
+  }
+  .menuItems table td:first-of-type{
+      border-right: 2px solid white;
+      width: 55%;
+  }
+  
+.menuItems table td{
+    padding-left: 50px;
+}
