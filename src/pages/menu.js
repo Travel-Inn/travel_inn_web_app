@@ -19,7 +19,7 @@ import dessert from '../images/dessert.jpg' ;
                 {
                     menuTabs.map((menuTab,pos)=>(
                         <div className="menuTab" key={pos}>
-                            <img src={menuTab} width="150px" height="150px" className="menuTabImage"/>
+                            <img src={menuTab} width="150px" height="150px" className="menuTabImage" alt="#"/>
                             <h4>Breakfast</h4>
                         </div>
                     ))
