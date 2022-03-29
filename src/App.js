@@ -1,19 +1,22 @@
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Contact from './pages/contact';
+import Header from './components/header';
+import Menu from './pages/menu';
+import Home from './pages/home';
 
 function App() {
   return (
-    <div className="homeContent">
-      <div className="homePageInfo">
-        <h2>Sunny-Side</h2>
-        <span>___________O___________</span>
-        <h1>Hotel</h1>
-        <p>ROOMS-SUITE</p>
-      </div>
-      <div className="btns">
-        <button className='btn'>Contact Now</button>
-        <button className='btn'>Reserve Now</button>
-      </div>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Header />} >
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="booking" element ={<Home />} />
+        <Route path="menu" element ={<Menu />} />
+        <Route path="contact" element ={<Contact />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
