@@ -1,13 +1,13 @@
-.homeContent{
+.landing {
     background-image: url('../images/aboutslider2-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
     width: 100%;
-    top: 0;
-    bottom: 0;
-  }
-  .homePageInfo {
+}
+
+.landing-container {
+    padding: 20px;
+}
+
+.landing-text {
     text-align: center;
     color: white;
     background-color: rgba(0,0,0, 0.7);
@@ -16,30 +16,53 @@
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    margin-top: 15%;
+    margin-top: 10%;
+    margin-bottom: 4.2%;
   }
-  
-  h2{
-    margin-bottom: 0;
+
+  .hotel-name {
+      font-size: 2.5rem;
   }
-  .btns{
-    justify-content: space-around;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    margin-top: 10px;
+
+  .rns {
+      font-size: 1rem;
   }
-  .btn{
-    display: block;
-    font-size: 18px;
-    border: 2px solid white;
-    padding: 5px 10px 5px 10px;
+
+  .landing-text > span {
+      font-size: 1.5rem;
   }
-  .btn:first-of-type{
-    background-color: darkslateblue;
+
+
+  .about-us {
+      background-color: #f7eff1;
+      padding: 40px;
+      align-items: center;
   }
-  
-  .btn:last-of-type{
-    background-color: darksalmon;
+
+  .au-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .au-container > img {
+      width: 50%;
+      height: 500px;
+  }
+
+  .au-text {
+      text-align: center;
+  }
+
+  .au-text > h2 {
+      margin-top: 5%;
+      font-size: 3rem;
+  }
+
+  .au-text > p {
+      width: 450px;
+      color: goldenrod;
+      font-size: 1.5rem;
+      margin-top: 5%;
   }
