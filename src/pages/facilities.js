@@ -2,14 +2,13 @@
 
 
 
-function Facilities() {
+export default function Facilities() {
 
     return(
-        <div>
-            
+        <div >
+            <h1>dkhvfkjvfkevufyj</h1>
         </div>
     )
 }
 
 
-export default Facilities

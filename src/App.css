@@ -1,48 +1,4 @@
-.homeContent{
-  background-image: url('images/aboutslider2-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-}
-.homePageInfo {
-  text-align: center;
-  color: white;
-  background-color: rgba(0,0,0, 0.7);
-  width: 40%;
-  border-radius: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  margin-top: 15%;
-}
 
-h2{
-  margin-bottom: 0;
-}
-.btns{
-  justify-content: space-around;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  margin-top: 10px;
-}
-.btn{
-  display: block;
-  font-size: 18px;
-  border: 2px solid white;
-  padding: 5px 10px 5px 10px;
-}
-.btn:first-of-type{
-  background-color: darkslateblue;
-}
-
-.btn:last-of-type{
-  background-color: darksalmon;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
