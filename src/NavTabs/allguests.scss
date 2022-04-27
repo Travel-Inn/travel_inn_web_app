@@ -1,0 +1,28 @@
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+table tr{
+    background-color: #a48bff;
+    color: white;
+}
+table td, table th{
+    border-bottom: 5px solid white;
+    padding: 20px;
+}
+table th:first-child{
+    border-top-left-radius: 15px;
+}
+table th:last-child{
+    border-top-right-radius: 15px;
+}
+table tr:last-child td:first-child{
+    border-bottom-left-radius: 25px;
+}
+table tr:last-child td:last-child{
+    border-bottom-right-radius: 25px;
+}
