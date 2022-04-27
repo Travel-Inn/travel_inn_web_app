@@ -1,4 +1,5 @@
 import './Sidebar.scss';
+import { NavLink} from 'react-router-dom';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupIcon from '@mui/icons-material/Group';
 import BedIcon from '@mui/icons-material/Bed';
@@ -19,16 +20,16 @@ function Sidebar() {
             <div className="center">
                 <ul>
                     <p className="title">MAIN</p>
-                    <li>
+                    <NavLink to ={"home"}><li>
                         <DashboardIcon className="icon" />
                         <span>Dashboard</span>
-                    </li>
+                    </li></NavLink>
 
                     <p className="title">LISTS</p>
-                    <li>
+                    <NavLink to ={'guests/allguests'}><li>
                         <GroupIcon className="icon" />
                         <span>Guests</span>
-                    </li>
+                    </li></NavLink>
 
                     <li>
                         <BedIcon className="icon" />
