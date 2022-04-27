@@ -1,0 +1,32 @@
+.navBar{
+    border-radius: 25px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    width: 80%;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navBarOption{
+    display: block;
+    text-decoration: none;
+    color: #6439ff;
+    font-weight: bold;
+    border-right: thin solid #6439ff;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+.navBarOption:hover{
+    background-color: #6439ff;
+    color: white;
+}
+
+.activeTab{
+    background-color: #6439ff;
+    color: white;
+    font-weight: bolder;
+}
