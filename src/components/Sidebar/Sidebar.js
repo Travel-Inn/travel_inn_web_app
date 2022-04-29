@@ -20,7 +20,7 @@ function Sidebar() {
             <div className="center">
                 <ul>
                     <p className="title">MAIN</p>
-                    <NavLink to ={"home"}><li>
+                    <NavLink to ={"dashboard"}><li>
                         <DashboardIcon className="icon" />
                         <span>Dashboard</span>
                     </li></NavLink>
