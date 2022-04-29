@@ -1,13 +1,30 @@
 import './Navbar.scss';
 import SearchIcon from '@mui/icons-material/Search';
+import { getAuth } from 'firebase/auth'; 
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-
+import React from 'react';
 
 function Navbar() {
+    const [user, setUser] = React.useState("");
+
+    getAuth().onAuthStateChanged(
+        function(user){
+            setUser(user);
+        }
+    )
+
+    const showOptions=()=>{
+        let target = document.getElementsByClassName('popup')[0];
+        target.style.display = "block";
+    }
+    const closeOptions=()=>{
+        let target = document.getElementsByClassName('popup')[0];
+        target.style.display = "none";
+    }
     return (
         <nav>
             <div className="wrapper">
@@ -35,10 +52,13 @@ function Navbar() {
                     <div className="item">
                         <ListOutlinedIcon className='icon' />
                     </div>
-                    <div className="item">
-                        <img src="https://images.unsplash.com/photo-1515041219749-89347f83291a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWluaW9uc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="avatar" className='avatar' />
+                    <div className="item" onMouseOver={showOptions} onMouseOut ={closeOptions}>
+                        <img src={user.photoURL} alt="avatar" className='avatar' />
+                        <div className="popup">
+                            <p>{user.displayName}</p>
+                            <p>{user.email}</p>
                     </div>
-
+                    </div>
 
                 </div>
             </div>
