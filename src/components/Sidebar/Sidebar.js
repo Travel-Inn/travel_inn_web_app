@@ -11,7 +11,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 
-
 function Sidebar() {
     return (
         <div className="sidebar">
