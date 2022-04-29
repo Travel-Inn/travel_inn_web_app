@@ -21,7 +21,6 @@ export default function Login(){
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        const pic = user.photoURL;
         console.log(user)
         navigate("home/dashboard",  {replace:true});
         // ...
