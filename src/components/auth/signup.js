@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 
 export default function SignUp(){
@@ -48,9 +48,11 @@ export default function SignUp(){
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            user.displayName = fname + lname;
-            user.phoneNumber = "+233551540686";
+            updateProfile(auth.currentUser, {
+                        displayName: fname + lname, photoURL: "https://images.unsplash.com/photo-1515041219749-89347f83291a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWluaW9uc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            });
             console.log(user);
+            
             navigate("/begin", {replace:true});
         })
         .catch((error) => {
@@ -75,3 +77,15 @@ export default function SignUp(){
 
 
 }
+
+// useEffect(() => {
+//     db.collection("customersData").onSnapshot((snapshot) => {
+//       setCustomersData(
+//         snapshot.docs.map((doc) => ({
+//           id: doc.id,
+//           data: doc.data(),
+//         }))
+//       );
+//     });
+//     console.log({ customersData });
+//   }, []);
