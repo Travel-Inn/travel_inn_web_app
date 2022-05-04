@@ -8,6 +8,7 @@
         .welcome {
             color: lightpink;
             font-size: 50px;
+            text-align: center;
 
             .name {
                 color: dodgerblue;
@@ -17,7 +18,9 @@
 
         .widgets {
             display: flex;
-            gap: 60px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
         }
     }
 
