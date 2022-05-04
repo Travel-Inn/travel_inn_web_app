@@ -14,7 +14,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 function Sidebar() {
     return (
         <div className="sidebar">
-            <div className="top"><span className='logo'>Travel Inn Admin Dashboard</span></div>
+            <div data-aos="fade-down" data-aos-easing="ease-in-linear" data-aos-duration="2000000000" className="top"><span className='logo'>Travel Inn Admin </span></div>
             <hr />
             <div className="center">
                 <ul>
