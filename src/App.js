@@ -23,10 +23,9 @@ function App() {
           <div className="content">
             <Navbar />
             <Routes>
-              <Route path='/dashboard' element={<Dashboard />} />
+              <Route path='/dashboard/' index element={<Dashboard />} />
               <Route path='/*' element={<Dashboard404 />} />
             </Routes>
-            <Dashboard />
           </div>
       </div>
   );

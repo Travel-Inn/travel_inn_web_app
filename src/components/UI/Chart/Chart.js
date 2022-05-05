@@ -30,7 +30,7 @@ const optionsLineChart = {
 };
 
   return (
-    <div className='Chart'>
+    <div className='Chart' data-aos='fade-up'>
         <div className='chart-title'>Chart</div>
         <div className='chart-description'>The various payments in a month</div>
         <hr/>
