@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import {db} from './../../utils/firebase';
 import { collection, getDocs } from "firebase/firestore"; 
 import './Login.scss';
-import PersonIcon from '@mui/icons-material/Person';
 import TabTitle from '../../components/UI/TabTitle';
-import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
 
 
 
@@ -50,7 +48,7 @@ export default function Login() {
     const verify= async ()=>{
         const querySnapshot = await getDocs(collection(db, "admins"));
         querySnapshot.forEach((doc) => {
-        if(doc.data().email == email){
+        if(doc.data().email === email){
             console.log(`${doc.data().priviledge}`);
         }
         console.log(`${doc.data().email}`);
