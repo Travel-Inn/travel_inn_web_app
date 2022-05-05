@@ -1,5 +1,6 @@
 import './Sidebar.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { getAuth, signOut } from 'firebase/auth'; 
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupIcon from '@mui/icons-material/Group';
 import BedIcon from '@mui/icons-material/Bed';
@@ -13,6 +14,16 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 
 function Sidebar() {
+    const navigate = useNavigate();
+    
+    const logout =() =>{
+        const auth = getAuth();
+        signOut(auth).then(() => {
+            navigate("/login");
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
     return (
         <div className="sidebar">
             <div data-aos="fade-down" data-aos-easing="ease-in-linear" data-aos-duration="2000000000" className="top"><span className='logo'>Travel Inn Admin </span></div>
@@ -65,7 +76,7 @@ function Sidebar() {
 
                     <li>
                         <LogoutIcon className="icon" />
-                        <NavLink to={'/logout'}><span>LogOut</span></NavLink>
+                        <span onClick = {()=>logout()}>LogOut</span>
                     </li>
 
                 </ul>
