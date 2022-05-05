@@ -3,6 +3,7 @@ import './Dashboard.scss';
 import 'aos/dist/aos.css';
 import PersonCard from '../../components/UI/PersonCard/PersonCard';
 import TabTitle from '../../components/UI/TabTitle';
+import Chart from '../../components/UI/Chart/Chart';
 
 
 
@@ -19,6 +20,8 @@ export default function Dashboard() {
                     <Widget />
                     <Widget />
                 </div>
+
+                <Chart type='area'/>
                 
             </div>
             <div className="part-two">

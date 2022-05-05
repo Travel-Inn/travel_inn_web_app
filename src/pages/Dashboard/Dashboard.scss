@@ -1,12 +1,18 @@
 .dashboard-container {
     display: flex;
-    margin-left: 10px;
+    //background-color: #e6f5f5;
+    padding-left: 10px;
 
     .part-one {
         flex: 2;
+        background-color: white;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .welcome {
-            color: lightpink;
+            color: rgb(211, 202, 204);
             font-size: 50px;
             text-align: center;
 
@@ -19,9 +25,11 @@
         .widgets {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
             align-items: center;
+            gap: 30px;
         }
+
+        
     }
 
     .part-two {
@@ -38,6 +46,7 @@
             border-radius: 25px;
             align-items: center;
             gap: 10px;
+            background-color: white;
 
 
             .hotel-pic {

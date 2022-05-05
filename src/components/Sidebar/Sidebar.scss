@@ -1,17 +1,15 @@
 .sidebar {
     flex: 1;
-    height: 90vh;
+    height: 100vh;
     max-height: 1000vh;
     background-color: white;
-    border-radius: 25px;
-    border-left: 0.5px solid lightgray;
-    box-shadow: 28px 0px 26px -10px rgba(237,230,230,0.81);
-    -webkit-box-shadow: 28px 0px 26px -10px rgba(237,230,230,0.81);
-    -moz-box-shadow: 28px 0px 26px -10px rgba(237,230,230,0.81);
-    margin: 20px;
+    //border: 0.5px solid lightgray;
+    border-radius: 15px;
     position: sticky;
     top: 0;
     z-index: 1;
+    gap: 10px;
+    margin: 10px;
 
     .top {
         height: 50px;
@@ -57,7 +55,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #ece8ff;
+                    background-color: #FFFAF0;
                 }
 
                 .icon {
@@ -70,7 +68,11 @@
                     font-weight: 600;
                     color: #888;
                     margin-left: 10px;
+
+                    
                 }
+                
+                
             }
 
         }

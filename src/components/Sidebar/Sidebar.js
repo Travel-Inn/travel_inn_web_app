@@ -1,4 +1,5 @@
 import './Sidebar.scss';
+import { NavLink } from 'react-router-dom';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupIcon from '@mui/icons-material/Group';
 import BedIcon from '@mui/icons-material/Bed';
@@ -21,50 +22,50 @@ function Sidebar() {
                     <p className="title">MAIN</p>
                     <li>
                         <DashboardIcon className="icon" />
-                        <span>Dashboard</span>
+                        <NavLink to={'/dashboard'}><span>Dashboard</span></NavLink>
                     </li>
 
                     <p className="title">LISTS</p>
                     <li>
                         <GroupIcon className="icon" />
-                        <span>Guests</span>
+                        <NavLink to={'/guests'}><span>Guests</span></NavLink>
                     </li>
 
                     <li>
                         <BedIcon className="icon" />
-                        <span>Rooms</span>
+                        <NavLink to={'/rooms'}><span>Rooms</span></NavLink>
                     </li>
 
                     <li>
                         <MenuBookIcon className="icon" />
-                        <span>Bookings</span>
+                        <NavLink to={'/bookings'}><span>Bookings</span></NavLink>
                     </li>
 
                     <p className="title">USEFUL</p>
                     <li>
                         <BarChartIcon className="icon" />
-                        <span>Statistics</span>
+                        <NavLink to={'/statistics'}><span>Statistics</span></NavLink>
                     </li>
 
                     <li>
                         <NotificationsActiveIcon className="icon" />
-                        <span>Notifications</span>
+                        <NavLink to={'/notifications'}><span>Notifications</span></NavLink>
                     </li>
 
                     <li>
                         <SettingsIcon className="icon" />
-                        <span>Settings</span>
+                        <NavLink to={'/settings'}><span>Settings</span></NavLink>
                     </li>
 
                     <p className="title">USER</p>
                     <li>
                         <PersonIcon className="icon" />
-                        <span>Profile</span>
+                        <NavLink to={'/profile'}><span>Profile</span></NavLink>
                     </li>
 
                     <li>
                         <LogoutIcon className="icon" />
-                        <span>Log Out</span>
+                        <NavLink to={'/logout'}><span>LogOut</span></NavLink>
                     </li>
 
                 </ul>

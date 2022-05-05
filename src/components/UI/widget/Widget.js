@@ -8,7 +8,7 @@ const Widget = () => {
         <div className="container">
             <div className="widget">
                 <div className="top">
-                <CountUp end={80} />%
+                <CountUp end={80} suffix='%'/>
                     <ArrowUpwardOutlinedIcon className='icon' />
 
                 </div>

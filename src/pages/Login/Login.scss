@@ -1,0 +1,108 @@
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 100%;
+        align-items: center ;
+        justify-content: center;
+        background: linear-gradient(to top, #fffaf0, lightgray, skyblue, dodgerblue);
+
+       .login-form {
+           padding: 20px;
+           border: 2px solid #619bd4;
+           border-radius: 15px;
+           height: 400px;
+           display: flex;
+           flex-direction: column;
+           gap: 30px;
+           justify-content: center;
+
+           .login-admin {
+               display: flex;
+               flex-direction: row;
+               gap: 5px;
+
+               .login-admin-icon {
+                font-size: 60px;
+                }
+ 
+                .username {
+                    outline: none;
+                    border: 0.5px solid #619bd4;                    width: 350px;
+                    padding: 5px;
+                    text-align: center;
+                    background: transparent;
+                    font-size: 30px;
+                    color: #619bd4;
+                    border-radius: 15px;
+
+                    &::placeholder {
+                        color: #619bd4;
+                    }
+                }
+            }
+
+
+           .tel {
+               display: flex;
+               flex-direction: row;
+               gap: 5px;
+
+               .login-admin-icon {
+                   font-size: 60px;
+               }
+
+               .prefix {
+                   border: 0.5px solid #619bd4;
+                   width: 80px;
+                   font-size: 30px;
+                   text-align: center;
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   color: #619bd4;
+                   border-radius: 15px;
+
+               }
+
+               .phone {
+                   outline: none;
+                   border: 0.5px solid #619bd4;                   width: 263px;
+                   padding: 5px;
+                   background: transparent;
+                   font-size: 30px;
+                   text-align: center;
+                   color: #619bd4;
+                   border-radius: 15px;
+
+
+                   &::placeholder {
+                    color: #619bd4;
+                }
+               }
+           }
+
+
+        
+
+       }
+    }
+
+
+    .other-part {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .login-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
