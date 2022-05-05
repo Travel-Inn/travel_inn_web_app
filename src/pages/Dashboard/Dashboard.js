@@ -1,3 +1,5 @@
+import React from 'react';
+import { getAuth } from 'firebase/auth'; 
 import Widget from '../../components/UI/widget/Widget';
 import './Dashboard.scss';
 import 'aos/dist/aos.css';
@@ -11,11 +13,18 @@ import Chart from '../../components/UI/Chart/Chart';
 
 
 export default function Dashboard() {
+    const [user, setUser] = React.useState("");
+    getAuth().onAuthStateChanged(
+        function(user){
+            setUser(user);
+        }
+    )
+
     TabTitle("Travel Inn | Dashboard");
     return(
         <div className="dashboard-container">
             <div className="part-one">
-                <h1 data-aos= "fade-right" data-aos-duration="5000" data-aos-easing="ease-in-sine" className="welcome">Welcome, <span className="name">James</span></h1>
+                <h1 data-aos= "fade-right" data-aos-duration="5000" data-aos-easing="ease-in-sine" className="welcome">Welcome, <span className="name">{user !=null?user.displayName:""}</span></h1>
                 <div className="widgets">
                     <Widget />
                     <Widget />
