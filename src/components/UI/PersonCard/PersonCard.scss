@@ -1,0 +1,48 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    border-bottom: 0.5px solid lightgray;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 10px;
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        .info {
+            display: flex;
+            gap: 12px;
+            color: #a49ab1;
+            font-weight: 500;
+        }
+    }
+
+    .date-status {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .date {
+            color: #a49ab1;
+
+        }
+
+        .status {
+            background-color: #e4e2e6;
+            padding: 5px;
+            border-radius: 10px;
+            color: dodgerblue;
+            font-weight: 500;
+        }
+    }
+}

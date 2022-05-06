@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Login from './pages/Login/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import firebase from "./utils/firebase";
+import OTP from './pages/OTP/otp';
+import Main404 from './pages/main404/Main404';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/otp' element={<OTP/>} />
+        <Route path='/dashboard' element={<App/>} />
+        <Route path='/dashboard/*' element={<App/>} />
+        <Route path='/*' element={<Main404/>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

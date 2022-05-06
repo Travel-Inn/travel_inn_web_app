@@ -1,7 +1,15 @@
 .sidebar {
     flex: 1;
-    min-height: 1000vh;
-    border-right: 0.5px solid rgb(231, 228, 228);
+    height: 100vh;
+    max-height: 1000vh;
+    background-color: white;
+    //border: 0.5px solid lightgray;
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    gap: 10px;
+    margin: 10px;
 
     .top {
         height: 50px;
@@ -9,7 +17,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 15px;
+        padding-left: 10px;
 
         .logo {
             font-size: 20px;
@@ -20,7 +29,7 @@
 
     hr {
         height: 0;
-        border: 0.5px solid rgb(231, 228, 228);
+        border: 0.5px solid rgb(253, 252, 252);
     }
 
     .center {
@@ -46,7 +55,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #ece8ff;
+                    background-color: #FFFAF0;
                 }
 
                 .icon {
@@ -59,7 +68,11 @@
                     font-weight: 600;
                     color: #888;
                     margin-left: 10px;
+
+                    
                 }
+                
+                
             }
 
         }
@@ -68,7 +81,7 @@
     .theme {
         display: flex;
         align-items: center;
-        margin: 10px;
+        margin: 20px;
 
         .themeOption {
             height: 20px;
