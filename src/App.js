@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Dashboard404 from './pages/dashboard404/Dashboard404';
+import Guests from './pages/Guests/Guests';
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
           <div className="content">
             <Navbar />
             <Routes>
-              <Route path='/dashboard/' index element={<Dashboard />} />
-              <Route path='/*' element={<Dashboard404 />} />
+              <Route path='/'  element={<Dashboard />} />
+              <Route path='/guests' element={<Guests/>} />
+              <Route path='*' element={<Dashboard404 />} />
             </Routes>
           </div>
       </div>
