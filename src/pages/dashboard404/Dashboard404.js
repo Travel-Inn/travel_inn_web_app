@@ -1,5 +1,6 @@
 import React from 'react'
 import './Dashboard404.scss';
+import { NavLink } from 'react-router-dom';
 
 const Dashboard404 = () => {
   return (
@@ -16,6 +17,8 @@ const Dashboard404 = () => {
         <span className="ffour">4</span>
       </div>
       <span className="pnf">Page not found</span>
+      <NavLink to={'/dashboard'} ><span>Back To Dashboard</span></NavLink>
+
 
     </div>
   )

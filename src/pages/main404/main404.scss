@@ -1,0 +1,53 @@
+.main-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    background: white;
+    margin: 10px;
+    padding: 0;
+
+
+    .main-errorimg {
+        width: 70%;
+        height: 450px;
+        padding: 0;
+
+        .main-error-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .main-errortext {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+
+        .main-four, .main-zero, .main-ffour {
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .main-four {
+            color: dodgerblue;
+        }
+
+        .main-zero {
+            color: goldenrod;
+        }
+
+        .main-ffour {
+            color: purple;
+        }
+
+        
+    }
+
+    .main-pnf {
+        font-size: 60px;
+        font-weight: 600;
+        color: skyblue;
+    }
+
+}

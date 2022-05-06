@@ -17,7 +17,7 @@ ReactDOM.render(
         <Route path='/otp' element={<OTP/>} />
         <Route path='/dashboard' element={<App/>} />
         <Route path='/dashboard/*' element={<App/>} />
-        <Route path='/*' element={<Main404/>} />
+        <Route path='*' element={<Main404/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
