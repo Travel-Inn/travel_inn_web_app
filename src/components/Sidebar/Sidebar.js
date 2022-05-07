@@ -10,6 +10,7 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 
 
@@ -50,6 +51,11 @@ function Sidebar() {
                     <li>
                         <MenuBookIcon className="icon" />
                         <NavLink to={'/dashboard/bookings'}><span>Bookings</span></NavLink>
+                    </li>
+
+                    <li>
+                        <AttachMoneyIcon className="icon" />
+                        <NavLink to={'/dashboard/transactions'}><span>Transactions</span></NavLink>
                     </li>
 
                     <p className="title">USEFUL</p>
