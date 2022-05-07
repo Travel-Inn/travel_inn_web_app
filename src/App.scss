@@ -1,10 +1,12 @@
 .App {
+    width: 100%;
+    margin: 0;
     display: flex;
-    background-color: #f8f8f4;
+    background-color: #dae1ed;
     .content {
         flex: 6;
         min-height: 100vh;
-
+        padding-right: 10px;
         
     }
 
