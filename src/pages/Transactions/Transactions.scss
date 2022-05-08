@@ -1,0 +1,25 @@
+.transactions {
+    //border: 1px solid black;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    .dt-w {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        //align-items: center;
+        gap: 20px;
+
+        .trans-widgets {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            border: 0.5px solid lightgray;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import TabTitle from '../../components/UI/TabTitle';
+import TitleCard from '../../components/UI/Titlecard/TitleCard';
 import './Guests.scss';
 
 const Guests = () => {
@@ -10,7 +11,7 @@ const Guests = () => {
   return (
     <div className='guests-container'>
         
-        
+        <TitleCard pageTitle="Guests"/>
     </div>
   )
 }
