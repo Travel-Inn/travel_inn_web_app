@@ -8,7 +8,7 @@ const Rooms = () => {
   return (
     <div className='rooms-container'>
       <TitleCard pageTitle='Rooms' />
-      <Table />
+      <Table title='Room Info' subtitle='All Available Rooms' />
     </div>
   )
 }

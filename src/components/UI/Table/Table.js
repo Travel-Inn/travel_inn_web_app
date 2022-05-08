@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 
 
-const ListTable = () => {
+const ListTable = ({title, subtitle}) => {
 
     const rows = [
         {id: 1, RoomNum: 'R365', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
@@ -30,8 +30,8 @@ const ListTable = () => {
       ];
   return (
     <div className='table-container'>
-        <span className="table-title">Room Info</span>
-        <span className="table-subtitle">All Available Rooms</span>
+        <span className="table-title">{title}</span>
+        <span className="table-subtitle">{subtitle}</span>
 
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">

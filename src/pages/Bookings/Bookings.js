@@ -1,8 +1,10 @@
 import React from 'react'
+import TitleCard from '../../components/UI/Titlecard/TitleCard';
 
 const Bookings = () => {
   return (
-    <div>Bookings</div>
+    <div>
+      <TitleCard pageTitle="Bookings"/>    </div>
   )
 }
 
