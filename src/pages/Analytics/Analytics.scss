@@ -15,4 +15,17 @@
         flex-direction: row;
         gap: 10px;
     }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .fcharts {
+            display: flex;
+            flex-direction: row;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+    }
 }
