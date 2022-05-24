@@ -2,14 +2,14 @@ import React from 'react'
 import './Chart.scss'
 import ApexCharts from 'react-apexcharts'
 
-const Chart = (props) => {
+const Chart = ({type, title, subtitle, width}) => {
   const seriesLineChart = [{
-    name: 'Mersharchs',
-    data: [120, 160, 200, 470, 420, 150, 470, 750, 650, 190, 140]
+    name: 'Bookings',
+    data: [120, 160, 200, 470, 420, 150, 470, 750, 650, 190, 140,100]
 }];
 
 const optionsLineChart = {
-  labels: ['01 Sept', '02 Sept', '03 Sept', '04 Sept', '05 Sept', '06 Sept', '07 Sept', '08 Sept', '09 Sept', '10 Sept', '11 Sept'],
+  labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
   theme: {
     monochrome: {
       enabled: true,
@@ -30,20 +30,21 @@ const optionsLineChart = {
 };
 
   return (
-    <div className='Chart' data-aos='fade-up'>
-        <div className='chart-title'>Chart</div>
-        <div className='chart-description'>The various payments in a month</div>
+    <div className='Chart' data-aos='fade-up' >
+        <div className='chart-title'>{title}</div>
+        <div className='chart-description'>{subtitle}</div>
         <hr/>
         <div>
           <ApexCharts
-          type={props.type}
+          type={type}
           height={250}
           series={seriesLineChart}
           options={optionsLineChart}
+          width={width}
           />
         </div>
     </div>
   )
 }
 
-export default Chart
+export default Chart;

@@ -26,19 +26,24 @@
         border-radius: 5px;
         align-self: center;
 
-        &.successful {
+        &.Successful, &.Approved, &.Checked-In {
             color: green;
             background-color: rgba(0, 128, 0, 0.1);
         }
 
-        &.pending {
+        &.Pending {
             color: blue;
             background-color: rgba(0, 0, 255, 0.1);
         }
 
-        &.failed {
+        &.Failed, &.Checked-Out {
             color: red;
             background-color: rgba(255, 0, 0, 0.1);
         }
     }
+
+    
+    
+
+    
 }

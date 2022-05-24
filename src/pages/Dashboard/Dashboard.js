@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import { getAuth } from 'firebase/auth'; 
 import Widget from '../../components/UI/widget/Widget';
 import './Dashboard.scss';
@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function Dashboard() {
-    const [user, setUser] = React.useState("");
+    const [user, setUser] = useState("");
     getAuth().onAuthStateChanged(
         function(user){
             setUser(user);
@@ -25,17 +25,40 @@ export default function Dashboard() {
     TabTitle("Travel Inn | Dashboard");
     return(
         <div className="dcontainer">
-            <TitleCard pageTitle="Dashboard"/>
+            <TitleCard pageTitle="Overview"/>
 
             <div className="dashboard-container">
                 <div className="part-one">
                     <h1 data-aos= "fade-right" data-aos-duration="5000" data-aos-easing="ease-in-sine" className="welcome">Welcome, <span className="name">{user !=null?user.displayName:""}</span></h1>
                     <div className="widgets">
-                        <Widget />
-                        <Widget />
+                        <Widget 
+                            fig1='80' 
+                            fig2='31' 
+                            fig3='19' 
+                            sub1='Booked' 
+                            sub2='Checked In' 
+                            title='Saint Dennis'
+                            prefix=''
+                            suffix='%'
+                        />
+                        <Widget 
+                            fig1='50' 
+                            fig2='48' 
+                            fig3='20' 
+                            sub1='Booked' 
+                            sub2='Checked In' 
+                            title='New Haven'
+                            prefix=''
+                            suffix='%'
+                        />
                     </div>
 
-                    <Chart type='area'/>
+                    <Chart 
+                        type='area' 
+                        title='This Week' 
+                        subtitle='All bookings made this week'
+                        width='650'
+                    />
                     
                 </div>
                 <div className="part-two">
@@ -44,9 +67,21 @@ export default function Dashboard() {
                         <div className="bl">
                             <p>Booking List</p>
                             <div className="cards">
-                                <PersonCard />
-                                <PersonCard />
-                                <PersonCard />
+                                <PersonCard 
+                                    name='Warrena Buffet'
+                                    sku='#SGKL'
+                                    guests='1'
+                                />
+                                <PersonCard
+                                    name='Warrena Buffet'
+                                    sku='#SGKL'
+                                    guests='5' 
+                                />
+                                <PersonCard
+                                    name='Warrena Buffet'
+                                    sku='#SGKL'
+                                    guests='3' 
+                                />
                             </div>
                         </div>
                         <NavLink to="/dashboard/bookings"><span className="va">View All</span></NavLink>

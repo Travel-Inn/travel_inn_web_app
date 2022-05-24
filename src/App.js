@@ -11,6 +11,7 @@ import Guests from './pages/Guests/Guests';
 import Transactions from './pages/Transactions/Transactions';
 import Rooms from './pages/Rooms/Rooms';
 import Bookings from './pages/Bookings/Bookings';
+import Analytics from './pages/Analytics/Analytics';
 
 function App() {
 
@@ -32,6 +33,8 @@ function App() {
               <Route path='/rooms' element={<Rooms/>} />
               <Route path='/bookings' element={<Bookings/>} />
               <Route path='/transactions' element={<Transactions/>} />
+              <Route path='/analytics' element={<Analytics/>} />
+
               <Route path='*' element={<Dashboard404 />} />
             </Routes>
           </div>

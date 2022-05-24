@@ -34,55 +34,55 @@ function Sidebar() {
                     <p className="title">MAIN</p>
                     <li>
                         <DashboardIcon className="icon" />
-                        <NavLink to={'/dashboard'}><span>Dashboard</span></NavLink>
+                        <NavLink to={'/dashboard'} className='aaa'><span>Dashboard</span></NavLink>
                     </li>
 
                     <p className="title">LISTS</p>
                     <li>
                         <GroupIcon className="icon" />
-                        <NavLink to={'/dashboard/guests'}><span>Guests</span></NavLink>
+                        <NavLink to={'/dashboard/guests'} className='aaa'><span>Guests</span></NavLink>
                     </li>
 
                     <li>
                         <BedIcon className="icon" />
-                        <NavLink to={'/dashboard/rooms'}><span>Rooms</span></NavLink>
+                        <NavLink to={'/dashboard/rooms'} className='aaa'><span>Rooms</span></NavLink>
                     </li>
 
                     <li>
                         <MenuBookIcon className="icon" />
-                        <NavLink to={'/dashboard/bookings'}><span>Bookings</span></NavLink>
+                        <NavLink to={'/dashboard/bookings'} className='aaa'><span>Bookings</span></NavLink>
                     </li>
 
                     <li>
                         <AttachMoneyIcon className="icon" />
-                        <NavLink to={'/dashboard/transactions'}><span>Transactions</span></NavLink>
+                        <NavLink to={'/dashboard/transactions'} className='aaa'><span>Transactions</span></NavLink>
                     </li>
 
                     <p className="title">USEFUL</p>
                     <li>
                         <BarChartIcon className="icon" />
-                        <NavLink to={'/dashboard/statistics'}><span>Statistics</span></NavLink>
+                        <NavLink to={'/dashboard/analytics'} className='aaa'><span>Analytics</span></NavLink>
                     </li>
 
                     <li>
                         <NotificationsActiveIcon className="icon" />
-                        <NavLink to={'/dashboard/notifications'}><span>Notifications</span></NavLink>
+                        <NavLink to={'/dashboard/notifications'} className='aaa'><span>Notifications</span></NavLink>
                     </li>
 
                     <li>
                         <SettingsIcon className="icon" />
-                        <NavLink to={'/dashboard/settings'}><span>Settings</span></NavLink>
+                        <NavLink to={'/dashboard/settings'} className='aaa'><span>Settings</span></NavLink>
                     </li>
 
                     <p className="title">USER</p>
                     <li>
                         <PersonIcon className="icon" />
-                        <NavLink to={'/dashboard/profile'}><span>Profile</span></NavLink>
+                        <NavLink to={'/dashboard/profile'} className='aaa'><span>Profile</span></NavLink>
                     </li>
 
                     <li>
                         <LogoutIcon className="icon" />
-                        <span onClick = {()=>logout()}>LogOut</span>
+                        <span onClick = {()=>logout()} className='aaa'>LogOut</span>
                     </li>
 
                 </ul>
