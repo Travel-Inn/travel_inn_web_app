@@ -12,21 +12,21 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 const ListTable = ({title, subtitle}) => {
 
     const rows = [
-        {id: 1, RoomNum: 'R365', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
-        {id: 2, RoomNum: 'R325', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
-        {id: 3, RoomNum: 'R465', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
-        {id: 4, RoomNum: 'P365', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
-        {id: 5, RoomNum: 'R865', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
-        {id: 6, RoomNum: 'R665', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
-        {id: 7, RoomNum: 'R365', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
-        {id: 8, RoomNum: 'R365', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
-        {id: 9, RoomNum: 'P368', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
-        {id: 10, RoomNum: 'R365', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
-        {id: 11, RoomNum: 'R365', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
-        {id: 12, RoomNum: 'R365', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
-        {id: 13, RoomNum: 'R365', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
-        {id: 14, RoomNum: 'P115', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
-        {id: 15, RoomNum: 'R365', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
+        {RoomId: 'R1', RoomNum: 'A654', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R2', RoomNum: 'A535', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
+        {RoomId: 'R3', RoomNum: 'A574', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
+        {RoomId: 'R4', RoomNum: 'A357', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R5', RoomNum: 'A354', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
+        {RoomId: 'R6', RoomNum: 'A021', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R7', RoomNum: 'A654', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
+        {RoomId: 'R8', RoomNum: 'A654', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
+        {RoomId: 'R9', RoomNum: 'A854', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R10', RoomNum: 'A654', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
+        {RoomId: 'R11', RoomNum: 'A654', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R12', RoomNum: 'A654', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
+        {RoomId: 'R13', RoomNum: 'A654', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
+        {RoomId: 'R14', RoomNum: 'A878', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
+        {RoomId: 'R15', RoomNum: 'A654', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
       ];
   return (
     <div className='table-container'>
@@ -47,10 +47,10 @@ const ListTable = ({title, subtitle}) => {
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow
-                        key={row.id}
+                        key={row.RoomId}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            <TableCell align="center" className='tablecell'>{row.id}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.RoomId}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.RoomNum}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.RoomType}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>

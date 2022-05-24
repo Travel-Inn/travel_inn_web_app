@@ -1,0 +1,18 @@
+.analytics-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}

@@ -3,9 +3,10 @@
     padding: 15px;
     border: 0.5px solid lightgray;
     border-radius: 20px;
-    width: 600px;
     height: 300px;
     align-self: center;
+    background-color: #ffffff;
+    flex: 1;
 
     .chart-description{
         font-size: 14px;
