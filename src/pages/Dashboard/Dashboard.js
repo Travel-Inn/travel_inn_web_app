@@ -22,6 +22,27 @@ export default function Dashboard() {
         }
     )
 
+    const optionsChart = {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        theme: {
+          monochrome: {
+            enabled: true,
+            color: '#31316A',
+          }
+        },
+        tooltip: {
+          fillSeriesColor: false,
+          onDatasetHover: {
+            highlightDataSeries: false,
+          },
+          theme: 'light',
+          style: {
+            fontSize: '12px',
+            fontFamily: 'Inter',
+          },
+        },
+    };
+
     TabTitle("Travel Inn | Dashboard");
     return(
         <div className="dcontainer">
@@ -58,6 +79,9 @@ export default function Dashboard() {
                         title='This Week' 
                         subtitle='All bookings made this week'
                         width='650'
+                        height='320'
+                        aosfade='fade-up'
+                        options={optionsChart}
                     />
                     
                 </div>
