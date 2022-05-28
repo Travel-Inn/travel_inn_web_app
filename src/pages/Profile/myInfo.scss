@@ -1,0 +1,23 @@
+.infoContent {
+    padding-left: 5%;
+
+    table {
+        text-align: left;
+
+        tbody tr th{
+            width: 50%;
+            padding: 10px;
+        }
+        tbody tr:first-of-type th{
+            padding: 8px;
+            color: black;
+        }
+        tbody tr td{
+            width: 50%;
+            padding: 10px;
+        }
+        tbody tr:last-of-type td{
+            text-align: left;
+        }
+    }
+}
