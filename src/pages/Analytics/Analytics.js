@@ -49,7 +49,7 @@ const Analytics = () => {
                 type='bar' 
                 title='This Year' 
                 subtitle='All bookings made this year'
-                width='400'
+                width='370'
                 height='500'
                 aosfade='fade-right'
                 options={ATWoptionsChart}
