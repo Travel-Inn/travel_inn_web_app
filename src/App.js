@@ -38,6 +38,7 @@ function App() {
               <Route path='/transactions' element={<Transactions/>} />
               <Route path='/analytics' element={<Analytics/>} />
               <Route path='/profile' element={<Profile/>}>
+                <Route path='/profile' element={<Navigate to = "information"/>} />
                 <Route path="settings" element={<Settings/>} />
                 <Route path="information" element={<MyInfo />} />
               </Route>
