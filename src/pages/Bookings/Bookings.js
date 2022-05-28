@@ -3,8 +3,11 @@ import TitleCard from '../../components/UI/Titlecard/TitleCard';
 import DataTable from '../../components/UI/DataTable/DataTable';
 import './Bookings.scss';
 import { bookingRows } from '../../assests/Data/data';
+import TabTitle from '../../components/UI/TabTitle';
 
 const Bookings = () => {
+
+  TabTitle('Travel Inn | Bookings');
 
 
   const columns = [
@@ -19,6 +22,11 @@ const Bookings = () => {
       field: 'duration',
       headerName: 'Stay Duration',
       width: 150,
+      renderCell: (params) =>{
+        return <div>
+                {params.row.duration} day{params.row.duration > 1 && 's'}
+              </div>
+      }
     },
 
     {

@@ -1,7 +1,10 @@
 import React from 'react'
+import TabTitle from '../../components/UI/TabTitle'
 import './Profile.scss'
 
 const Profile = () => {
+
+  TabTitle('Travel Inn | Profile');
   return (
     <div className='profile-container'>
         <div className="top">

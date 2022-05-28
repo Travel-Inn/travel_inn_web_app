@@ -1,8 +1,11 @@
 import React from 'react'
 import './Dashboard404.scss';
 import { NavLink } from 'react-router-dom';
+import TabTitle from '../../components/UI/TabTitle';
 
 const Dashboard404 = () => {
+
+  TabTitle('Travel Inn | 404')
   return (
     <div className='error-container'>
 

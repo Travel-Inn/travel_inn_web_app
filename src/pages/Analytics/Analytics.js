@@ -2,8 +2,11 @@ import React from 'react'
 import AnTopW from '../../components/UI/widget/AnTopW';
 import './Analytics.scss'
 import Chart from '../../components/UI/Chart/Chart'
+import { AGoptionsChart, AGseriesAreaChart, ARoptionsChart, ARseriesLineChart, ATWoptionsChart, ATWseriesBarChart } from '../../assests/Data/data';
+import TabTitle from '../../components/UI/TabTitle';
 
 const Analytics = () => {
+    TabTitle('Travel Inn | Analytics');
 
     const optionsChart = {
         labels: ['Income'],
@@ -26,26 +29,7 @@ const Analytics = () => {
         },
     };
 
-    const optionChart = {
-        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-        theme: {
-          monochrome: {
-            enabled: true,
-            color: '#31316A',
-          }
-        },
-        tooltip: {
-          fillSeriesColor: false,
-          onDatasetHover: {
-            highlightDataSeries: false,
-          },
-          theme: 'light',
-          style: {
-            fontSize: '12px',
-            fontFamily: 'Inter',
-          },
-        },
-    };
+    
   return (
     <div className='analytics-container'>
         <div className="top">
@@ -62,7 +46,8 @@ const Analytics = () => {
                 width='500'
                 height='340'
                 aosfade='fade-right'
-                options={optionChart}
+                options={AGoptionsChart}
+                series={AGseriesAreaChart}
             />
 
             <Chart 
@@ -72,7 +57,8 @@ const Analytics = () => {
                 width='500'
                 height='340'
                 aosfade='fade-left'
-                options={optionChart}
+                options={ARoptionsChart}
+                series={ARseriesLineChart}
             />
 
 
@@ -85,7 +71,8 @@ const Analytics = () => {
                 width='500'
                 height='500'
                 aosfade='fade-right'
-                options={optionChart}
+                options={ATWoptionsChart}
+                series={ATWseriesBarChart}
             />
             <div className="fcharts">
                 <Chart 
