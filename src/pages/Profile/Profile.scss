@@ -43,6 +43,22 @@
             border-radius: 50px;
             z-index: 0;
             right: 30px;
+
+            .profile-info {
+                display: flex;
+                justify-content: space-around;
+                width: 65%;
+
+                .position p:first-child {
+                    color: red;
+                    font-weight: bold;
+                }
+
+                .mail-part p:first-child {
+                    font-weight: bold;
+                }
+            }
+            
         }
     }
 
@@ -53,5 +69,22 @@
         width: 90%;
         border-radius: 25px;
         
+    }
+    .bottom ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: thin solid grey;
+    }
+    .bottom ul li {
+        padding: 10px;
+        padding-bottom: 1px;
+        margin-right: 12%;
+    }
+    .bottom ul li .tabb{
+        text-decoration: none;
+    }
+    .bottom ul li .tabb span{
+        font-weight: bold;
     }
 }
