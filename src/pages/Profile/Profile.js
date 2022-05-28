@@ -15,7 +15,7 @@ const Profile = () => {
             </div>
         </div>
         <div className="bottom">
-
+            
         </div>
     </div>
   )
