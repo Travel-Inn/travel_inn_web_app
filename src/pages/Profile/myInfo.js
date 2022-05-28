@@ -4,7 +4,7 @@ import './myInfo.scss'
 export default function MyInfo(){
     return(
         <div className="infoContent">
-           <table>
+           <table className="adminInfo">
                <tbody>
                    <tr>
                         <th>First Name:</th><td>Mersharch</td>

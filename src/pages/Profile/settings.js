@@ -9,7 +9,7 @@ export default function Settings(){
     const [gender, setGender] = React.useState("Mersharch");
     return(
         <div className="content">
-           <table>
+           <table className="adminInfo">
                <tbody>
                    <tr>
                        <th>Edit Information</th>
