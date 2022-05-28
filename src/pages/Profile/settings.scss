@@ -1,0 +1,44 @@
+.content {
+    padding-left: 5%;
+
+    table {
+        text-align: left;
+
+        tbody tr th{
+            width: 50%;
+            padding: 8px;
+        }
+        tbody tr td{
+            width: 50%;
+            padding: 8px;
+        }
+        tbody tr:first-of-type th{
+            padding: 0;
+            padding-left: 8px;
+            color: red;
+        }
+        tbody tr:last-of-type td{
+            text-align: center;
+        }
+        tbody tr td input[type=text], input[type=number], input[type=email], select{
+            border-radius: 10px;
+            height: 30px;
+            border: thin solid grey;
+            padding-left: 10px;
+            min-width: 100%;
+        }
+        tbody tr td input[type=submit]{
+            border-radius: 15px;
+            border: thin solid grey;
+            padding: 8px 15px 8px 15px;
+            text-align: center;
+        }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+}
