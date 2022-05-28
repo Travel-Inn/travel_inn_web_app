@@ -45,7 +45,7 @@ export const bookingRows = [
 
 
   export const dboptionsChart = {
-    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri','Sat','Sun'],
     theme: {
       monochrome: {
         enabled: true,
@@ -67,7 +67,7 @@ export const bookingRows = [
 
 export const dbseriesAreaChart = [{
   name: 'Bookings',
-  data: [120, 160, 200, 470, 420, 150, 470, 750, 650, 190, 140,100]
+  data: [120, 160, 200, 470, 420, 150, 470,]
 }];
 
 
@@ -134,6 +134,11 @@ export const ARseriesLineChart = [{
 
 export const ATWoptionsChart = {
   labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  plotOptions: {
+    bar: {
+      horizontal: true
+    }
+  },
   theme: {
     monochrome: {
       enabled: true,
@@ -157,3 +162,79 @@ export const ATWseriesBarChart = [{
   name: 'Bookings',
   data: [120, 160, 200, 470, 420, 150, 470, 750, 650, 190, 140,100]
 }];
+
+
+
+export const CIoptions = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+  plotOptions: {
+    pie: {
+      expandOnClick: false,
+      donut: {
+        size: '50px',
+        labels: {
+          show: true,
+          total:{
+            show: true,
+            showAlways: true,
+            fontSize: "16px"
+          }
+        }
+      }
+    }
+  }
+}
+
+export const CIseries = [44,55,66,78,21]
+
+
+
+
+export const COoptions = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+  plotOptions: {
+    pie: {
+      expandOnClick: false,
+      donut: {
+        size: '50px',
+        labels: {
+          show: true,
+          total:{
+            show: true,
+            showAlways: true,
+            fontSize: "16px"
+          }
+        }
+      }
+    }
+  }
+}
+
+export const COseries = [44,55,66,78,21]
+
+
+export const Roomoptions = {
+  labels: ['Classic', 'Classic-Double', 'Double','Presidential'],
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        total: {
+          show: true,
+          label: 'TOTAL'
+        }
+      }
+    }
+  },
+  
+}
+
+export const Roomseries = [65,44,25,70]
+
+
+
+export const Cancoptions = {
+  labels: ['Cancelled'],
+  
+}
+
+export const Cancseries = [65]
