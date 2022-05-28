@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate, NavLink, Outlet} from 'react-router-dom';
 import TabTitle from '../../components/UI/TabTitle'
 import './Profile.scss'
 
@@ -13,12 +14,28 @@ const Profile = () => {
             </div>
 
             <div className="profile-card">
-                <div className="position"></div>
-                <div className="mail-part"></div>
+              <div className='profile-info'>
+                <div className="position">
+                  <p>Mersharch Wonder</p>
+                  <p>Administrator</p>
+                </div>
+                <div className="mail-part">
+                  <p>wonersh@307project.com</p>
+                  <p>Email</p>
+                </div>
+              </div>
             </div>
         </div>
         <div className="bottom">
-            
+          <ul>
+            <li>
+              <NavLink to={'/dashboard/profile/information'} className='tabb'><span>Information</span></NavLink>
+            </li>
+            <li>
+              <NavLink to={'/dashboard/profile/settings'} className='tabb'><span>Settings</span></NavLink>
+            </li>
+          </ul>
+          <Outlet/>
         </div>
     </div>
   )
