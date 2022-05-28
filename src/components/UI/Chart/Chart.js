@@ -2,26 +2,23 @@ import React from 'react'
 import './Chart.scss'
 import ApexCharts from 'react-apexcharts'
 
-const Chart = ({type, title, subtitle, width, aosfade, height, options}) => {
-  const seriesLineChart = [{
-    name: 'Bookings',
-    data: [120, 160, 200, 470, 420, 150, 470, 750, 650, 190, 140,100]
-}];
+const Chart = (props) => {
+  
 
 
 
   return (
-    <div className='Chart' data-aos={aosfade} >
-        <div className='chart-title'>{title}</div>
-        <div className='chart-description'>{subtitle}</div>
+    <div className='Chart' data-aos={props.aosfade} >
+        <div className='chart-title'>{props.title}</div>
+        <div className='chart-description'>{props.subtitle}</div>
         <hr/>
         <div>
           <ApexCharts
-          type={type}
-          height={height}
-          series={seriesLineChart}
-          options={options}
-          width={width}
+          type={props.type}
+          height={props.height}
+          series={props.series}
+          options={props.options}
+          width={props.width}
           />
         </div>
     </div>
