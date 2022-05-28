@@ -69,10 +69,10 @@ function Sidebar() {
                         <NavLink to={'/dashboard/notifications'} className='aaa'><span>Notifications</span></NavLink>
                     </li>
 
-                    <li>
+                    {/*<li>
                         <SettingsIcon className="icon" />
                         <NavLink to={'/dashboard/settings'} className='aaa'><span>Settings</span></NavLink>
-                    </li>
+    </li>*/}
 
                     <p className="title">USER</p>
                     <li>
