@@ -38,7 +38,10 @@ function App() {
               <Route path='/transactions' element={<Transactions/>} />
               <Route path='/analytics' element={<Analytics/>} />
               <Route path='/profile' element={<Profile/>}>
+<<<<<<< HEAD
                 <Route path ='/profile' element={<Navigate to="information" />} />
+=======
+>>>>>>> c5558d65694a6251aa789de30a46500f408d312d
                 <Route path="settings" element={<Settings/>} />
                 <Route path="information" element={<MyInfo />} />
               </Route>
