@@ -1,10 +1,11 @@
 import React from 'react'
 import { useNavigate, NavLink, Outlet} from 'react-router-dom';
+import TabTitle from '../../components/UI/TabTitle'
 import './Profile.scss'
 
 const Profile = () => {
-  const navigate= useNavigate();
 
+  TabTitle('Travel Inn | Profile');
   return (
     <div className='profile-container'>
         <div className="top">

@@ -4,7 +4,7 @@ import './Rooms.scss'
 import TabTitle from '../../components/UI/TabTitle';
 
 const Rooms = () => {
-  TabTitle('Travel Inn | ROOMS');
+  TabTitle('Travel Inn | Rooms');
   return (
     <div className='rooms-container'>
       <TitleCard pageTitle='Rooms' />

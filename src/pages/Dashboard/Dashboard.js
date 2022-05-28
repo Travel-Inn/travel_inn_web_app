@@ -8,6 +8,7 @@ import TabTitle from '../../components/UI/TabTitle';
 import Chart from '../../components/UI/Chart/Chart';
 import TitleCard from '../../components/UI/Titlecard/TitleCard';
 import { NavLink } from 'react-router-dom';
+import { dboptionsChart, dbseriesAreaChart } from '../../assests/Data/data';
 
 
 
@@ -22,26 +23,7 @@ export default function Dashboard() {
         }
     )
 
-    const optionsChart = {
-        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-        theme: {
-          monochrome: {
-            enabled: true,
-            color: '#31316A',
-          }
-        },
-        tooltip: {
-          fillSeriesColor: false,
-          onDatasetHover: {
-            highlightDataSeries: false,
-          },
-          theme: 'light',
-          style: {
-            fontSize: '12px',
-            fontFamily: 'Inter',
-          },
-        },
-    };
+    
 
     TabTitle("Travel Inn | Dashboard");
     return(
@@ -81,7 +63,8 @@ export default function Dashboard() {
                         width='650'
                         height='320'
                         aosfade='fade-up'
-                        options={optionsChart}
+                        options={dboptionsChart}
+                        series={dbseriesAreaChart}
                     />
                     
                 </div>
