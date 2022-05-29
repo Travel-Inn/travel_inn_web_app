@@ -14,10 +14,10 @@ const Analytics = () => {
   return (
     <div className='analytics-container'>
         <div className="top">
-            <AnTopW title='Total Guests' value='1000' icon='GroupIcon' />
-            <AnTopW title='Total Rooms' value='500' icon='GroupIcon' />
-            <AnTopW title='Bookings' value='364' icon='GroupIcon'/>
-            <AnTopW title='Cancellations' value='120' icon='GroupIcon' />
+            <AnTopW  suffix='' title='Total Guests' value='1000' icon='GroupIcon' />
+            <AnTopW  suffix='' title='Total Rooms' value='500' icon='BedIcon' />
+            <AnTopW  suffix='' title='Bookings' value='364' icon='MenuBookIcon'/>
+            <AnTopW  suffix='.00' title='Revenue' value='120' icon='AttachMoneyIcon' />
         </div>
         <div className="center">
             <Chart 
@@ -26,7 +26,7 @@ const Analytics = () => {
                 subtitle='Number of guests per month for current year'
                 width='500'
                 height='340'
-                aosfade='fade-right'
+                aosfade='fade-down'
                 options={AGoptionsChart}
                 series={AGseriesAreaChart}
             />
@@ -37,7 +37,7 @@ const Analytics = () => {
                 subtitle='Income per month for current year'
                 width='500'
                 height='340'
-                aosfade='fade-left'
+                aosfade='fade-up'
                 options={ARoptionsChart}
                 series={ARseriesLineChart}
             />
@@ -49,7 +49,7 @@ const Analytics = () => {
                 type='bar' 
                 title='This Year' 
                 subtitle='All bookings made this year'
-                width='370'
+                width='430'
                 height='500'
                 aosfade='fade-right'
                 options={ATWoptionsChart}
@@ -62,7 +62,7 @@ const Analytics = () => {
                     subtitle='Successful Check-Ins for current month'
                     width='300'
                     height='300'
-                    aosfade='fade-left'
+                    aosfade='fade-down'
                     options={CIoptions}
                     series={CIseries}
 
@@ -74,7 +74,7 @@ const Analytics = () => {
                     subtitle='Successful Check-Outs for current month'
                     width='300'
                     height='240'
-                    aosfade='fade-left'
+                    aosfade='fade-down'
                     options={COoptions}
                     series={COseries}
 
@@ -86,7 +86,7 @@ const Analytics = () => {
                     subtitle='Number of rooms currently booked'
                     width='300'
                     height='240'
-                    aosfade='fade-left'
+                    aosfade='fade-up'
                     options={Roomoptions}
                     series={Roomseries}
 
@@ -98,7 +98,7 @@ const Analytics = () => {
                     subtitle='Number of cancellations made'
                     width='300'
                     height='240'
-                    aosfade='fade-left'
+                    aosfade='fade-up'
                     options={Cancoptions}
                     series={Cancseries}
 
