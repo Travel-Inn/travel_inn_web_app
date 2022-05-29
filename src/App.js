@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
           <Sidebar />
-          <div className="content">
+          <div className="main-content">
             <Navbar />
             <Routes>
               <Route path='/'  element={<Dashboard />} />

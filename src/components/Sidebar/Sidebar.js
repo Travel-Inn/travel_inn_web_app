@@ -6,7 +6,6 @@ import GroupIcon from '@mui/icons-material/Group';
 import BedIcon from '@mui/icons-material/Bed';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -63,15 +62,7 @@ function Sidebar() {
                         <NavLink to={'/dashboard/analytics'} className='aaa'><span>Analytics</span></NavLink>
                     </li>
 
-                    <li>
-                        <NotificationsActiveIcon className="icon" />
-                        <NavLink to={'/dashboard/notifications'} className='aaa'><span>Notifications</span></NavLink>
-                    </li>
-
-                    {/*<li>
-                        <SettingsIcon className="icon" />
-                        <NavLink to={'/dashboard/settings'} className='aaa'><span>Settings</span></NavLink>
-    </li>*/}
+                    
 
                     <p className="title">USER</p>
                     <li>
