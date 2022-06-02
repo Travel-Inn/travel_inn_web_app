@@ -1,12 +1,22 @@
 import React from 'react';
 import './settings.scss'
 
-export default function Settings(){
-    const [fName, setFname] = React.useState("Mersharch");
-    const [lName, setLname] = React.useState("Wonder");
-    const [email, setEmail] = React.useState("wonersh@307project.com");
-    const [phone, setPhone] = React.useState("0551540686");
-    const [gender, setGender] = React.useState("Mersharch");
+export default function Settings(props){
+    const [fName, setFname] = React.useState("");
+    const [lName, setLname] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+    const [gender, setGender] = React.useState("");
+
+    React.useEffect(()=>{
+        if(props.adminProfile.fname!=null){
+            setFname(props.adminProfile.fname);
+            setLname(props.adminProfile.lname);
+            setEmail(props.adminProfile.email);
+            setPhone(props.adminProfile.phone);
+            setGender(props.adminProfile.sex);
+        }
+    },[props.adminProfile])
     return(
         <div className="content">
            <table className="adminInfo">
@@ -26,7 +36,7 @@ export default function Settings(){
                         <th>Email:</th><td><input type="email" name="email" value={email} onChange={(text)=>setEmail(text.value)}/></td>
                    </tr>
                    <tr>
-                        <th>Mobile number:</th><td><input type="number" name = "phone" value={phone} onChange={(text)=>setPhone(text.value)}/></td>
+                        <th>Mobile number:</th><td><input type="text" name = "phone" value={phone} onChange={(text)=>setPhone(text.value)}/></td>
                    </tr>
                    <tr>
                         <th>Gender:</th>
