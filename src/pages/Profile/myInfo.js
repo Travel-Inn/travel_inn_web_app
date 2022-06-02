@@ -1,25 +1,25 @@
 import React from 'react';
 import './myInfo.scss'
 
-export default function MyInfo(){
+export default function MyInfo(props){
     return(
         <div className="infoContent">
            <table className="adminInfo">
                <tbody>
                    <tr>
-                        <th>First Name:</th><td>Mersharch</td>
+                        <th>First Name:</th><td>{props.adminProfile.fname}</td>
                    </tr>
                    <tr>
-                        <th>Last Name:</th><td>Wonder</td>
+                        <th>Last Name:</th><td>{props.adminProfile.lname}</td>
                    </tr>
                    <tr>
-                        <th>Email:</th><td>wonersh@307project.com</td>
+                        <th>Email:</th><td>{props.adminProfile.email}</td>
                    </tr>
                    <tr>
-                        <th>Mobile number:</th><td>0551540686</td>
+                        <th>Mobile number:</th><td>{props.adminProfile.phone}</td>
                    </tr>
                    <tr>
-                        <th>Gender:</th><td>Male</td>
+                        <th>Gender:</th><td>{props.adminProfile.sex}</td>
                    </tr>
                </tbody>
            </table>
