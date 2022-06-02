@@ -3,7 +3,7 @@ import { NavLink, Outlet} from 'react-router-dom';
 import TabTitle from '../../components/UI/TabTitle'
 import './Profile.scss'
 
-const Profile = () => {
+const Profile = (props) => {
 
   TabTitle('Travel Inn | Profile');
   return (
@@ -16,11 +16,11 @@ const Profile = () => {
             <div className="profile-card">
               <div className='profile-info'>
                 <div className="position">
-                  <p>Mersharch Wonder</p>
+                  <p>{props.adminProfile.name}</p>
                   <p>Administrator</p>
                 </div>
                 <div className="mail-part">
-                  <p>wonersh@307project.com</p>
+                  <p>{props.adminProfile.email}</p>
                   <p>Email</p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Profile = () => {
               <NavLink to={'/dashboard/profile/settings'} className='tabb'><span>Settings</span></NavLink>
             </li>
           </ul>
-          <Outlet/>
+          <Outlet />
         </div>
     </div>
   )
