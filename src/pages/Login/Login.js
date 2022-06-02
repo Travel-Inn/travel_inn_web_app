@@ -1,8 +1,8 @@
 import React from 'react';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import {db} from './../../utils/firebase';
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs, query, where } from "firebase/firestore"; 
 import './Login.scss';
 import TabTitle from '../../components/UI/TabTitle';
 
@@ -22,8 +22,7 @@ export default function Login() {
         setPassword(event.target.value);
     };
 
-    const signIn=(e)=>{
-        e.preventDefault();
+    const signIn=()=>{
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -41,36 +40,33 @@ export default function Login() {
         });
     }
 
-    const checkPermission=()=>{
-        let popup = document.getElementsByClassName('permissionPopup')[0];
-        popup.style.display = "block";
-    }
-    const verify= async ()=>{
-        const querySnapshot = await getDocs(collection(db, "admins"));
-        querySnapshot.forEach((doc) => {
-        if(doc.data().email === email){
-            console.log(`${doc.data().priviledge}`);
+    const verify= async (e)=>{
+        e.preventDefault();
+        const querySnapshot = await getDocs(query(collection(db, "admins"), where("email","==",email)));
+        if(!querySnapshot.empty){
+            signIn();
         }
-        console.log(`${doc.data().email}`);
-        console.log(email);
-        });
+        else{
+            console.log("invalid username or password");
+        }
     }
+
+    // React.useEffect(()=>{
+    //     if(verified==true)
+           
+    //     if(verified != true && verified !=null){
+    //         console.log("invalid username or password");
+    //     }
+    // },[verified])
 
     TabTitle('Travel Inn | Log In');
     return (
         <div className="formcontainer">
-            <form onSubmit={signIn}>
+            <form onSubmit={verify}>
                 <input type='email' placeholder="Email" value={email} onChange={updateEmail} className="inputfield"/>
                 <input type='password' placeholder="Password" value={password} onChange={updatePassword} className="inputfield"/>
                 <input type='submit' value="Login" className='loginBtn'/>
             </form>
-            <div className = "permissionPopup">
-                <input type = 'email' placeholder ="Email" value = {email} onChange={updateEmail} />
-                <input type='submit' value="Check" onClick={()=>verify()}/>
-            </div>
-            <button className="floatingButton" onClick={()=>checkPermission()}>
-                <p>+</p>
-            </button>
         </div>
     );
 }
