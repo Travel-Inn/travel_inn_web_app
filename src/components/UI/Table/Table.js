@@ -41,7 +41,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
                     <TableCell align="center" className='tablecell' ><ImportExportIcon className='icon' />Room No</TableCell>
                     <TableCell align="center" className='tablecell' ><ImportExportIcon className='icon' />Room Type</TableCell>
                     <TableCell align="center" className='tablecell' ><ImportExportIcon className='icon' />Bed No</TableCell>
-                    <TableCell align="center" className='tablecell' ><ImportExportIcon className='icon' />Max Occupants</TableCell>
+                    <TableCell align="center" className='tablecell' ><ImportExportIcon className='icon' />Room Status</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -54,7 +54,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
                             <TableCell align="center" className='tablecell'>{row.RoomNum}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.RoomType}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>
-                            <TableCell align="center" className='tablecell'>{row.MaxOccupants?"Available":"Booked"}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.Status?"Available":"Booked"}</TableCell>
                         </TableRow>
                     )):isSearch?loading?<TableRow><TableCell>Please wait...</TableCell></TableRow>: result.map((row) => (
                         <TableRow
@@ -65,7 +65,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
                             <TableCell align="center" className='tablecell'>{row.RoomNum}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.RoomType}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>
-                            <TableCell align="center" className='tablecell'>{row.MaxOccupants?"Available":"Booked"}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.Status?"Available":"Booked"}</TableCell>
                         </TableRow>
                     )):result.length ===0 ?<TableRow><TableCell>No Rooms Available</TableCell></TableRow>:null}
                 </TableBody>
