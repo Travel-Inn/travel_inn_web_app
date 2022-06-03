@@ -67,7 +67,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
                             <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.MaxOccupants?"Available":"Booked"}</TableCell>
                         </TableRow>
-                    )):result.length==0?<TableRow><TableCell>No Rooms Available</TableCell></TableRow>:null}
+                    )):result.length ===0 ?<TableRow><TableCell>No Rooms Available</TableCell></TableRow>:null}
                 </TableBody>
             </Table>
         </TableContainer>
