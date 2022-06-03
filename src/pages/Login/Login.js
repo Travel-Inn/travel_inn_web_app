@@ -13,6 +13,8 @@ export default function Login() {
     const navigate= useNavigate();
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
+    const [alert, setAlert] = React.useState("");
+
 
     const updateEmail = (event) => {
         setEmail(event.target.value);
@@ -39,6 +41,12 @@ export default function Login() {
             const errorMessage = error.message;
             console.log(errorCode);
             console.log(errorMessage);
+            setAlert('Invalid Password, NB: only 3 attempts allowed');
+            document.querySelector('.alert').classList.add('active');
+            setTimeout(()=> {
+                document.querySelector('.alert').classList.remove('active');
+                setAlert('');
+            },5000);
         });
     }
 
@@ -49,11 +57,11 @@ export default function Login() {
             signIn();
         }
         else{
-            document.querySelector('.alert').textContent = 'Invalid email';
+            setAlert('Invalid email');
             document.querySelector('.alert').classList.add('active');
             setTimeout(()=> {
                 document.querySelector('.alert').classList.remove('active');
-                document.querySelector('.alert').textContent = '';
+                setAlert('');
             },5000);
         }
     }
@@ -70,7 +78,7 @@ export default function Login() {
     return (
         <div className="formcontainer">
 
-            <div className="alert "></div>
+            <div className="alert ">{alert}</div>
             <form onSubmit={verify}>
                 <input type='email' placeholder="Email" value={email} onChange={updateEmail} className="inputfield"/>
                 <input type='password' placeholder="Password" value={password} onChange={updatePassword} className="inputfield"/>
