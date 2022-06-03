@@ -29,6 +29,8 @@ export default function Login() {
             // Signed in 
             const user = userCredential.user;
             console.log(user)
+            window.localStorage.setItem('password',password);
+            window.localStorage.setItem('email',email);
             navigate("/dashboard",  {reload:true});
             // ...
         })
