@@ -18,6 +18,7 @@ import Analytics from './pages/Analytics/Analytics';
 import Profile from './pages/Profile/Profile';
 import Settings from './pages/Profile/settings';
 import MyInfo from './pages/Profile/myInfo';
+import NewAdmin from './pages/Profile/newAdmin';
 
 function App() {
   const [adminDetails, setAdminDetails] = useState([]);
@@ -34,7 +35,8 @@ function App() {
       if(!querySnapshot.empty){
         const doc = querySnapshot.docs[0];
           const object = {name: doc.data().name, email:doc.data().email, fname: doc.data().firstName,
-                          lname: doc.data().lastName, sex: doc.data().gender, phone: doc.data().phone}
+                          lname: doc.data().lastName, sex: doc.data().gender, phone: doc.data().phone,
+                        pass: doc.data().priviledged}
           setAdminDetails(object); 
       }
   }
@@ -69,6 +71,7 @@ function App() {
                 <Route path='/profile' element={<Navigate to = "information"/>} />
                 <Route path="settings" element={<Settings adminProfile={adminDetails}/>}/>
                 <Route path="information" element={<MyInfo adminProfile={adminDetails}/>} />
+                <Route path="newAdmin" element={<NewAdmin adminProfile={adminDetails}/>} />
               </Route>
 
               <Route path='*' element={<Dashboard404 />} />
