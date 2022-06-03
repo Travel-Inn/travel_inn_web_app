@@ -45,8 +45,7 @@ function App() {
       if(user!=null){
         fetchData();
         }
-      console.log(adminDetails);
-  },[user]);
+  });
 
   useEffect(
     () => {
