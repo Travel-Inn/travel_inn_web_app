@@ -45,7 +45,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {!isSearch?roomDetails.length==0?<TableRow><TableCell>Please wait...</TableCell></TableRow>: roomDetails.map((row) => (
+                    {!isSearch?roomDetails.length === 0 ?<TableRow><TableCell>Please wait...</TableCell></TableRow>: roomDetails.map((row) => (
                         <TableRow
                         key={row.RoomId}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
