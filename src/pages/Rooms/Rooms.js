@@ -45,7 +45,7 @@ const Rooms = () => {
   }
 
   const addRoom = async ()=>{
-    const docRef = await addDoc(collection(db, "Rooms"), {
+    await addDoc(collection(db, "Rooms"), {
       roomName: roomName,
       roomNum: roomNumb,
       roomType: roomType,
