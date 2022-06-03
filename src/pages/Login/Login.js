@@ -49,7 +49,12 @@ export default function Login() {
             signIn();
         }
         else{
-            console.log("invalid username or password");
+            document.querySelector('.alert').textContent = 'Invalid email';
+            document.querySelector('.alert').classList.add('active');
+            setTimeout(()=> {
+                document.querySelector('.alert').classList.remove('active');
+                document.querySelector('.alert').textContent = '';
+            },5000);
         }
     }
 
@@ -64,6 +69,8 @@ export default function Login() {
     TabTitle('Travel Inn | Log In');
     return (
         <div className="formcontainer">
+
+            <div className="alert "></div>
             <form onSubmit={verify}>
                 <input type='email' placeholder="Email" value={email} onChange={updateEmail} className="inputfield"/>
                 <input type='password' placeholder="Password" value={password} onChange={updatePassword} className="inputfield"/>
