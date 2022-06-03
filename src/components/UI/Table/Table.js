@@ -9,8 +9,8 @@ import Paper from '@mui/material/Paper';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 
 
-const ListTable = ({title, subtitle}) => {
-
+const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => {
+    console.log(roomDetails);
     const rows = [
         {RoomId: 'R1546', RoomNum: 'A654', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
         {RoomId: 'R2351', RoomNum: 'A535', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
@@ -45,7 +45,7 @@ const ListTable = ({title, subtitle}) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
+                    {!isSearch?roomDetails.length==0?<TableRow><TableCell>Please wait...</TableCell></TableRow>: roomDetails.map((row) => (
                         <TableRow
                         key={row.RoomId}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -54,9 +54,20 @@ const ListTable = ({title, subtitle}) => {
                             <TableCell align="center" className='tablecell'>{row.RoomNum}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.RoomType}</TableCell>
                             <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>
-                            <TableCell align="center" className='tablecell'>{row.MaxOccupants}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.MaxOccupants?"Available":"Booked"}</TableCell>
                         </TableRow>
-                    ))}
+                    )):isSearch?loading?<TableRow><TableCell>Please wait...</TableCell></TableRow>: result.map((row) => (
+                        <TableRow
+                        key={row.RoomId}
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                        >
+                            <TableCell align="center" className='tablecell'>{row.RoomId}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.RoomNum}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.RoomType}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.BedNum}</TableCell>
+                            <TableCell align="center" className='tablecell'>{row.MaxOccupants?"Available":"Booked"}</TableCell>
+                        </TableRow>
+                    )):result.length==0?<TableRow><TableCell>No Rooms Available</TableCell></TableRow>:null}
                 </TableBody>
             </Table>
         </TableContainer>
