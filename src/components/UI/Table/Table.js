@@ -11,7 +11,7 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 
 const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => {
     console.log(roomDetails);
-    const rows = [
+    /* const rows = [
         {RoomId: 'R1546', RoomNum: 'A654', RoomType: 'Classic-Double', BedNum: 2, MaxOccupants: 4},
         {RoomId: 'R2351', RoomNum: 'A535', RoomType: 'Classic', BedNum: 1, MaxOccupants: 2},
         {RoomId: 'R3020', RoomNum: 'A574', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
@@ -27,7 +27,7 @@ const ListTable = ({title, subtitle, roomDetails, isSearch, result,loading}) => 
         {RoomId: 'R1335', RoomNum: 'A654', RoomType: 'Classic-Large', BedNum: 1, MaxOccupants: 3},
         {RoomId: 'R1442', RoomNum: 'A878', RoomType: 'Presidential', BedNum: 2, MaxOccupants: 4},
         {RoomId: 'R1535', RoomNum: 'A654', RoomType: 'Double-Dose', BedNum: 4, MaxOccupants: 8},
-      ];
+      ]; */
   return (
     <div className='table-container'>
         <span className="table-title">{title}</span>
