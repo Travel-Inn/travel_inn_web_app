@@ -34,6 +34,9 @@ const Profile = (props) => {
             <li>
               <NavLink to={'/dashboard/profile/settings'} className='tabb'><span>Settings</span></NavLink>
             </li>
+            <li>
+              <NavLink to={'/dashboard/profile/newAdmin'} className='tabb'><span>New Admin</span></NavLink>
+            </li>
           </ul>
           <Outlet />
         </div>
