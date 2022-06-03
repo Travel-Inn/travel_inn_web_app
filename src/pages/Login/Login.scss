@@ -5,6 +5,25 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    .alert {
+        display: none;
+    }
+
+    .active {
+        
+        background: transparent;
+        width: 200px;
+        height: 100px;
+        position: relative;
+        left: 43%;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 4%;
+        color: white;
+        transition: all 0.5s;
+        display: block;
+    }
+
     form{
         padding: 20px;
         position: absolute;
