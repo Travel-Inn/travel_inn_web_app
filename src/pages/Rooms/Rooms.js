@@ -25,7 +25,7 @@ const Rooms = () => {
     const querySnapshot = await getDocs(v);
     querySnapshot.forEach((doc)=>{
       const object = {RoomId: doc.data().roomNum, RoomNum: doc.data().roomName, RoomType: doc.data().roomType,
-                      BedNum: doc.data().bedNum, MaxOccupants: doc.data().isRoomAvailable}
+                      BedNum: doc.data().bedNum, Status: doc.data().isRoomAvailable}
       setRooms(rooms=>[...rooms, object]);
     })
   }

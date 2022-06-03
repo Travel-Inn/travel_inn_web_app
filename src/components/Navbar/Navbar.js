@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import SearchIcon from '@mui/icons-material/Search';
+//import SearchIcon from '@mui/icons-material/Search';
 import { NavLink } from 'react-router-dom';
 
 
@@ -8,8 +8,6 @@ function Navbar(props) {
         <nav>
             <div className="wrapper">
                 <div className="search">
-                    <input type="text" placeholder="Search..." />
-                    <SearchIcon className='icon' />
                 </div>
                 <div className="items">
                     <span className="nav-name">{props.adminName}</span>

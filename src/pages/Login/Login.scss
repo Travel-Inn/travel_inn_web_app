@@ -6,21 +6,22 @@
     background-size: cover;
 
     .alert {
-        display: none;
+        margin-top: -110;
+        //display: none;
     }
 
     .active {
-        
-        background: transparent;
-        width: max-content;
-        height: 100px;
-        position: relative;
-        left: 43%;
+        margin-top: 0;
+        background: rgba(211, 211, 211, 0.651);
+        width: 100%;
+        height: max-content;
         font-size: 30px;
         text-align: center;
-        padding-top: 4%;
-        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: black;
         display: block;
+        transition: ease-in-out 0.8s;
     }
 
     form{
