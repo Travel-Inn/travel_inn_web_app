@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Dashboard from './pages/Dashboard/Dashboard';
 import {db} from './utils/firebase';
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { getAuth, updateProfile } from 'firebase/auth'; 
+import { getAuth} from 'firebase/auth'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
